@@ -1,0 +1,101 @@
+@charset "utf-8";
+@import "https://unpkg.com/ress/dist/ress.min.css"; /* リセットCSS読込 */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    width: 18%;
+}
+
+main {
+    background: #ccc;
+}
+
+section {
+    color: white;
+}
+
+section + section {
+    margin-top: 150px;
+}
+
+section h2 {
+    letter-spacing: 30px;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 5rem;
+}
+
+.first img {
+    width: 100%;
+}
+
+.first .btn {
+    background-color: white;
+    color: black;
+    width: 300px;
+    text-align: center;
+    border: solid;
+    margin: 30px auto;
+    position: relative;
+    padding: 15px 0;
+}
+
+.first .btn::before {
+    content: "";
+    position: absolute; /* 絶対配置 */
+    top: 0; /* 上端合わせ */
+    bottom: 0; /* 下端合わせ */
+    left: 1em; /* 左からの距離 */
+    margin: auto; /* 上下中央に配置 */
+    width: 0; /* 三角形なので0 */
+    height: 0; /* 三角形なので0 */
+    border: 0.5em solid transparent; /* 透明ボーダーで三角形の形を作る */
+    border-left: 1em solid #212121;
+    width: 0; /* 三角形なので0 */
+    height: 0; /* 三角形なので0 */
+    border: 0.5em solid transparent; /* 透明ボーダーで三角形の形を作る */
+    border-left: 1em solid #212121;
+}
+
+.second,
+.third {
+    text-align: center;
+}
+
+.second p {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.third p {
+    margin: 20px ;
+}
+
+.third .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.third .grid img {
+    padding: 0;
+}

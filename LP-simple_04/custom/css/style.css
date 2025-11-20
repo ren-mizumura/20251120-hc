@@ -1,0 +1,145 @@
+@charset "utf-8";
+@import "ttps://unpkg.com/ress/dist/ress.min.css";
+
+* { 
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1;
+    counter-reset: num 0;
+    position: relative;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 70%,rgb(58, 41, 8));
+}
+
+
+
+header img {
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+header .mh-logo {
+    width: 30%;
+    position: absolute;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 70%;
+    height: 100%;
+    background: black;
+}
+
+main {
+    padding: 100px 0;
+}
+
+section {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    padding-left: 120px;
+}
+
+section + section {
+    margin-top: 80px;
+}
+
+h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #3aaeb2;
+    padding-top: 56px;
+}
+
+h2::before {
+    font-family: serif;
+    position: absolute;
+    top: 0;
+    font-size: 48px;
+    content: counter(num,decimal-leading-zero);
+    counter-increment: num 1;
+}
+
+h2 span {
+    writing-mode: vertical-rl;
+    padding-left: .5em;
+    transform: rotate(180deg);
+    border-left: 2px solid #3aaeb2;
+    letter-spacing: .1em;
+}
+
+h2 span.ja {
+    text-orientation: sideways-right;
+}
+
+section img {
+    width: 50%;
+    aspect-ratio: 16 / 9; 
+    object-fit: cover; 
+    display: block;
+}
+
+section .tate {
+    width: 50%;
+    aspect-ratio: 2/3;
+}
+
+.text {
+    width: 48%;
+    margin-left: auto;
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.item-copy {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    line-height: 1.8;
+}
+
+.item-copy span {
+    background: radial-gradient(rgb(58, 41, 8)40%,rgb(0, 0, 0));
+    padding: 4px;
+}
+
+.desc {
+    color: white;
+    line-height: 1.6;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+footer p {
+    width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+footer .footcopy {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+footer .logo {
+    display: block;
+    margin: 40px auto;
+}
+
+footer .copyright {
+    font-size: .8em;
+}
